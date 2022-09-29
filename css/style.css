@@ -426,7 +426,7 @@ body {
 
   color: var(--icon-color);
   background-color: var(--primary-background-color);
-  transition-property: background-color;
+  transition-property: background-color, color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -435,7 +435,7 @@ body {
   width: 20px;
   height: 20px;
   fill: currentColor;
-  transition-property: color;
+  transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -443,6 +443,7 @@ body {
 .social-link:hover,
 .social-link:focus {
   background-color: var(--accent-color);
+  color: var(--primary-background-color);
 }
 
 .social-link:hover .social-item-symbol,
@@ -480,7 +481,9 @@ body {
   color: var(--icon-color);
   border: 1px solid var(--icon-color);
   border-radius: 4px;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: border-color, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .logo-symbol {
@@ -488,7 +491,6 @@ body {
   height: 60px;
 
   fill: currentColor;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Footer */
@@ -579,10 +581,6 @@ body {
   background-color: var(--footer-item-color);
 }
 
-.footer-symbol {
-  fill: currentColor;
-}
-
 .backdrop {
   position: fixed;
   top: 0;
@@ -627,7 +625,6 @@ body {
 
 .is-hidden {
   opacity: 0;
-  visibility: hidden;
   pointer-events: none;
 
   transition-property: opacity;
